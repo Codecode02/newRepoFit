@@ -418,6 +418,8 @@ body {
     font-weight: 403;
     color: #FFFFFF;
     padding-bottom: 10px;
+    z-index: 2;
+    position: relative;
 }
 
 .welcome-section-yellow-triangle {
@@ -437,8 +439,8 @@ body {
 }
 
 .welcome-shape-circle-one {
-    top: 219px;
-    left: 563px;
+    top: 213px;
+    left: 483px;
     background-color: #FF0035;
 }
 
@@ -851,7 +853,7 @@ body {
 
     span {
         color: rgba(#FF0035, 0.8);
-        
+
     }
 }
 
