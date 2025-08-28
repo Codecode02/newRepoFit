@@ -1,0 +1,1416 @@
+@import "./assets/fonts/stylesheet.css";
+
+@mixin place-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto';
+}
+
+//////////////////// start header ////////////////////
+
+.header {
+    width: 100%;
+    height: 173px;
+    background-color: #393939;
+}
+
+.header-container {
+    width: 100%;
+    height: 100%;
+    padding: 0 32px;
+    max-width: 1504px;
+    margin: 0 auto;
+    @include place-center;
+    flex-direction: column;
+    gap: 30px 20px;
+}
+
+.logo {
+    width: 219px;
+    height: 47px;
+    display: block;
+    object-fit: contain;
+}
+
+.nav-list {
+    height: 26px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-list-item {
+    height: 100%;
+    padding: 0 20px;
+    @include place-center;
+
+
+    &:not(:last-child) {
+        box-shadow: 1px 0 0 0 #ffffff;
+    }
+}
+
+.nav-list-link {
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 705;
+    color: #ffffff;
+    text-transform: uppercase;
+    transition: color 240ms;
+
+    &:hover {
+        color: rgba(#ffffff, 0.8);
+    }
+
+    &:active,
+    &.active-header {
+        color: rgba(#ffffff, 0.8);
+    }
+}
+
+.burger-btn {
+    display: none;
+    border: none;
+    padding: 2px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    &:hover {
+        .burger-icon {
+            color: #FF4D72;
+        }
+    }
+}
+
+.burger-icon {
+    font-size: 27px;
+    line-height: 29px;
+    color: #FF0035;
+    transition: color 240ms;
+}
+
+.mobile-header-navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(100%);
+    width: 100%;
+    height: 100vh;
+    background-color: #393939;
+    display: flex;
+    flex-direction: column;
+    z-index: 3;
+    transition: transform 0.3s ease;
+
+    &.open {
+        transform: translateX(0);
+    }
+}
+
+.mobile-header-top {
+    width: 100%;
+    height: 85px;
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 23px;
+    box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.1);
+}
+
+.nav-close-btn {
+    padding: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    border: none;
+
+    &:hover {
+        .nav-close-icon {
+            color: #FF4D72;
+        }
+    }
+}
+
+.nav-close-icon {
+    font-size: 24px;
+    line-height: 26px;
+    color: #FF0035;
+    transition: color 240ms;
+}
+
+.mobile-navigation {
+    flex: 1;
+    padding: 60px 20px 20px;
+    overflow-y: auto;
+}
+
+.mobile-nav-list-item {
+    &:not(:last-child) {
+        .mobile-nav-list-link {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.mobile-nav-list-link {
+    display: inline-block;
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 705;
+    color: #ffffff;
+    text-transform: uppercase;
+    transition: color 240ms;
+
+    &:hover {
+        color: rgba(#FF0035, 0.8);
+    }
+
+    &.active-mobile,
+    &:active {
+        color: rgba(#FF0035, 0.8);
+    }
+}
+
+//////////////////// end header ////////////////////
+
+/////////////// start hero section /////////////////
+
+.content {
+    background-color: #393939;
+}
+
+.hero {
+    width: 100%;
+}
+
+.hero-container {
+    width: 100%;
+    min-height: 692px;
+    padding: 168px 32px 32px;
+    max-width: 1504px;
+    margin: 0 auto;
+    background-image: url("./assets/images/hero-img.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    position: relative;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 903px;
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-title {
+    display: inline-block;
+    font-size: 60px;
+    line-height: 63px;
+    font-weight: 405;
+    color: #FFFFFF;
+    margin-bottom: 47px;
+    text-transform: uppercase;
+    white-space: nowrap;
+
+    .highlight {
+        color: #FFBE35;
+    }
+}
+
+.hero-info {
+    display: inline-block;
+    padding: 40px;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 22px;
+    line-height: 27px;
+    font-weight: 505;
+    color: #ffffff;
+    text-align: center;
+}
+
+.shape {
+    object-fit: contain;
+    display: block;
+    position: absolute;
+    pointer-events: none;
+}
+
+.shape-polygon-top {
+    width: 45px;
+    height: 45px;
+    top: 60px;
+    right: 279px;
+    transform: rotate(30deg);
+}
+
+.shape-polygon-middle {
+    width: 39px;
+    height: 39px;
+    top: 195px;
+    left: 147px;
+    transform: rotate(-41deg);
+}
+
+.shape-polygon-bottom {
+    width: 51px;
+    height: 51px;
+    bottom: 117px;
+    right: 309px;
+    transform: rotate(30deg);
+}
+
+.shape-circumference {
+    width: 40px;
+    height: 40px;
+    bottom: 239px;
+    right: 133px;
+}
+
+.shape-square {
+    width: 38px;
+    height: 38px;
+    bottom: 91px;
+    left: 192px;
+    transform: rotate(-23deg);
+}
+
+.shape-circle {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    border-radius: 50%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.shape-circle-one {
+    bottom: 404px;
+    right: 261px;
+    background-color: #FF0035;
+}
+
+.shape-circle-two {
+    bottom: 44px;
+    right: 693px;
+    background-color: #FF0035;
+}
+
+.shape-circle-three {
+    top: 357px;
+    left: 220px;
+    background-color: #FF0035;
+}
+
+.shape-circle-four {
+    top: 80px;
+    left: 411px;
+    background-color: #FFBE35;
+}
+
+/////////////// end hero section //////////////////
+
+/////////////// welcome to fitpulse section start////////////////
+
+.welcome-to-fitpulse {
+    width: 100%;
+}
+
+.welcome-to-fitpulse-container {
+    padding: 80px 80px 0;
+    max-width: 1504px;
+    margin: 0 auto;
+    background-color: #393939;
+    text-align: center;
+    position: relative;
+}
+
+.fitpulse-section-title {
+    display: inline-block;
+    height: 56px;
+    position: relative;
+    font-size: 24px;
+    line-height: 26px;
+    font-weight: 405;
+    color: #FFFFFF;
+
+    .highlight {
+        color: #FF0035;
+    }
+
+    &::after {
+        content: "";
+        width: 60px;
+        height: 5px;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #FF0035;
+    }
+}
+
+.welcome-to-fitpulse-title {
+    margin-bottom: 40px;
+}
+
+.welcome-to-fitpulse-info {
+    display: flex;
+    align-items: flex-start;
+    column-gap: 28px;
+}
+
+.welcome-to-fitpulse-images {
+    width: 44.2%;
+    flex: 0 0 auto;
+    aspect-ratio: 567 / 500;
+    position: relative;
+    max-width: 480px;
+}
+
+.pushing-girl-picture,
+.fit-girl-picture {
+    font-size: 0;
+}
+
+.fit-girl-picture {
+    margin-top: 97px;
+    margin-left: -148px;
+}
+
+.pushing-girl-img,
+.fit-girl-img {
+    position: absolute;
+    border-radius: 8px;
+}
+
+.pushing-girl-img {
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: auto;
+}
+
+.fit-girl-img{
+    width: 56.08%;
+    top: 19.4%;
+    left: 43.91%;
+}
+
+
+.welcome-to-fitpulse-content {
+    flex: 1;
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 403;
+    color: #FFFFFF;
+    padding-bottom: 10px;
+}
+
+.welcome-section-yellow-triangle {
+    width: 30px;
+    height: 30px;
+    top: 194px;
+    left: 30px;
+    transform: rotate(-41deg);
+}
+
+.welcome-section-red-triangle {
+    width: 40px;
+    height: 40px;
+    top: 128px;
+    right: 60px;
+    transform: rotate(-41deg);
+}
+
+.welcome-shape-circle-one {
+    top: 219px;
+    left: 563px;
+    background-color: #FF0035;
+}
+
+.welcome-shape-circle-two {
+    left: 720px;
+    bottom: -10px;
+    background-color: #FF0035;
+}
+
+/////////////// welcome to fitpulse section end//////////////////
+
+/////////////// our programs section start//////////////////
+
+.our-programs {
+    width: 100%;
+}
+
+.our-programs-container {
+    padding: 80px 80px 0;
+    max-width: 1504px;
+    margin: 0 auto;
+    background-color: #393939;
+    text-align: center;
+    position: relative;
+}
+
+.our-programs-title {
+    margin-bottom: 60px;
+}
+
+.our-programs-list {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    gap: 40px 55px;
+}
+
+.our-programs-item {
+    flex: 1;
+    background-color: #4F4F4F;
+    border-radius: 8px;
+    padding: 40px 20px;
+    flex-direction: column;
+    @include place-center;
+}
+
+.our-programs-item-img {
+    display: block;
+    object-fit: contain;
+    height: 94px;
+    margin-bottom: 30px;
+}
+
+.subtitle {
+    display: inline-block;
+    font-weight: 405;
+    color: #FFFFFF;
+}
+
+.our-programs-item-title {
+    font-size: 22px;
+    line-height: 24px;
+    margin-bottom: 20px;
+}
+
+.our-programs-item-text {
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 403;
+    color: #ffffff;
+}
+
+.our-programs-red-triangle {
+    width: 40px;
+    height: 40px;
+    top: 93px;
+    left: 62px;
+    transform: rotate(-41deg);
+}
+
+.our-programs-yellow-square {
+    width: 30px;
+    height: 30px;
+    top: 100px;
+    right: 57px;
+    transform: rotate(-23deg);
+}
+
+.our-programs-circle-one {
+    top: 399px;
+    left: 478px;
+    background-color: #FF0035;
+}
+
+/////////////// our programs section end///////////////////
+
+/////////////// our trainers section start/////////////////
+
+.our-trainers {
+    width: 100%;
+}
+
+.our-trainers-container {
+    padding: 80px 80px 0;
+    max-width: 1504px;
+    margin: 0 auto;
+    background-color: #393939;
+    text-align: center;
+    position: relative;
+}
+
+.our-trainers-title {
+    margin-bottom: 60px;
+}
+
+.our-trainers-list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px 60px;
+}
+
+.our-trainers-item {
+    flex: 1;
+    min-width: 535px;
+    display: flex;
+    background-color: #4F4F4F;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.trainer-photo {
+    display: block;
+}
+
+.our-trainers-item-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px 20px;
+    min-width: 0;
+}
+
+.our-trainer-name {
+    font-size: 22px;
+    line-height: 24px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.specialization {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 505;
+    color: #FF0035;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    word-break: break-word;
+    text-align: left;
+}
+
+.about-trainer {
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 403;
+    color: #ffffff;
+    text-align: left;
+    margin-bottom: 30px;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.social-link-group {
+    display: flex;
+    column-gap: 20px;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+
+    &:hover {
+        .social-link-icon {
+            color: #A7A7A7;
+        }
+    }
+}
+
+.social-link-icon {
+    font-size: 26px;
+    color: #919191;
+    transition: color 240ms;
+}
+
+.our-trainers-red-triangle {
+    width: 47px;
+    height: 47px;
+    top: 80px;
+    left: 366px;
+    transform: rotate(30deg);
+}
+
+.our-trainers-circumference {
+    width: 40px;
+    height: 40px;
+    top: 221px;
+    right: 13px;
+}
+
+.our-trainers-circle-one {
+    bottom: 277px;
+    left: 24px;
+    background-color: #FF0035;
+}
+
+/////////////// our trainers section end///////////////////
+
+/////////////// contact us section start//////////////////
+
+.contact-us {
+    width: 100%;
+}
+
+.contact-us-container {
+    padding: 80px 80px 115px;
+    max-width: 1504px;
+    margin: 0 auto;
+    background-color: #393939;
+    text-align: center;
+    position: relative;
+}
+
+.contact-us-title {
+    margin-bottom: 60px;
+}
+
+.contact-us-content {
+    display: flex;
+    gap: 40px 80px;
+}
+
+.contact-list {
+    min-width: 539px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+.contact-list-item {
+    width: 100%;
+    min-height: 164px;
+    display: flex;
+    padding: 20px 30px;
+    border-radius: 8px;
+    background-color: #4F4F4F;
+}
+
+.contact-list-item-purpose {
+    width: 219px;
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 2px 0 0 0 #FF1A49;
+    padding-inline-end: 49px;
+}
+
+.purpose-img {
+    width: auto;
+    height: 42px;
+    object-fit: contain;
+    display: block;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 4px 6px rgba(#F23849, 0.2));
+}
+
+.purpose {
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 405;
+    color: #FFFFFF;
+    word-break: break-word;
+}
+
+.contact-info-group {
+    padding-inline-start: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    row-gap: 14px;
+    text-align: left;
+}
+
+.contact-info {
+    font-size: 22px;
+    line-height: 24px;
+    font-weight: 403;
+    color: #D3D3D3;
+    word-break: break-word;
+}
+
+.contact-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    min-width: 0;
+}
+
+.form-label {
+    font-size: 0;
+    text-align: left;
+    margin-bottom: 30px;
+
+    &.msg {
+        .contact-form-input {
+            margin-bottom: 10px;
+        }
+
+        .error-message {
+            display: block;
+        }
+    }
+}
+
+.form-label-txt {
+    font-size: 0;
+    text-align: left;
+    margin-bottom: 73px;
+
+    &.msg {
+        .contact-form-input {
+            margin-bottom: 10px;
+        }
+
+        .error-message {
+            display: block;
+        }
+    }
+}
+
+.contact-form-input {
+    width: 100%;
+    height: 56px;
+    padding: 0 20px;
+}
+
+.error-message {
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 403;
+    color: #FF0035;
+    display: none;
+}
+
+.contact-form-textarea {
+    height: 145px;
+    resize: none;
+    padding: 20px;
+}
+
+.contact-form-input,
+.contact-form-textarea {
+    width: 100%;
+    background-color: transparent;
+    border-radius: 6px;
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 403;
+    color: #D3D3D3;
+    border: 1px solid #D3D3D3;
+    transition: color 240ms;
+
+    &::placeholder {
+        color: #D3D3D3;
+        transition: color 240ms;
+    }
+
+    &:focus {
+        color: #BDBDBD;
+
+        &::placeholder {
+            color: #BDBDBD;
+        }
+    }
+}
+
+.submit-btn {
+    width: 100%;
+    height: 66px;
+    background-color: #FF1A49;
+    border-radius: 6px;
+    font-size: 22px;
+    line-height: 24px;
+    font-weight: 605;
+    color: #E9E9E9;
+    border: 1px solid #FF1A49;
+    cursor: pointer;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 100%;
+    padding: 0 20px;
+    text-transform: uppercase;
+    transition: all 200ms ease-out;
+
+    &:hover {
+        background-color: transparent;
+        color: #FF1A49;
+        border: 1px solid #FF1A49;
+    }
+}
+
+
+.contact-us-red-triangle {
+    width: 40px;
+    height: 40px;
+    top: 73px;
+    right: 58px;
+    transform: rotate(-41deg);
+}
+
+.contact-us-square {
+    width: 30px;
+    height: 30px;
+    top: 468px;
+    left: 16px;
+    transform: rotate(-23deg);
+}
+
+.contact-us-circle-one {
+    bottom: 80px;
+    left: 646px;
+    background-color: #FF0035;
+}
+
+/////////////// contact us section end////////////
+
+/////////////// footer end////////////////////////
+
+.footer {
+    width: 100%;
+    background-color: #656565;
+
+    .footer-logo-link {
+        margin-bottom: 20px;
+    }
+
+    .social-link {
+        &:hover {
+            .social-link-icon {
+                color: rgba(255, 255, 255, 0.7);
+            }
+        }
+    }
+
+    .social-link-icon {
+        color: #ffffff;
+    }
+}
+
+.footer-container {
+    max-width: 1504px;
+    width: 100%;
+    min-height: 376px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+}
+
+.footer-general-info {
+    text-align: left;
+}
+
+.footer-logo-link {
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.footer-description {
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 403;
+    color: #ffffff;
+    margin-bottom: 30px;
+    text-align: left;
+    max-width: 350px;
+}
+
+.footer-top-content{
+    display: flex;
+    column-gap: 12%;
+}
+
+.footer-top {
+    padding: 30px 80px 60px;
+    display: flex;
+    flex-direction: column;
+    column-gap: 99px;
+}
+
+.footer-information {
+    display: flex;
+    width: 100%;
+    column-gap: 12%;
+}
+
+.footer-information-cell {
+    text-align: left;
+}
+
+.footer-information-cell-title {
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 803;
+    color: #ffffff;
+    margin-bottom: 14px;
+}
+
+.footer-nav-item {
+    text-align: left;
+
+    &:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}
+
+.footer-nav-link {
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 503;
+    color: #ffffff;
+    word-break: break-word;
+    transition: color 240ms;
+
+    &:hover {
+        color: rgba(255, 255, 255, 0.7);
+    }
+}
+
+.footer-contact-item {
+    &:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}
+
+.footer-contact-item-title {
+    display: inline-block;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 903;
+    color: #ffffff;
+    margin-inline-end: 5px;
+}
+
+.footer-contact-type {
+    display: inline-block;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 503;
+    color: #ffffff;
+}
+
+.footer-bottom {
+    padding: 20px 80px;
+}
+
+.copyrights {
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 403;
+    color: #ffffff;
+}
+
+/////////////// footer start///////////////////
+
+@media screen and (max-width:1024px) {
+    .wrapper {
+        padding-top: 79px;
+    }
+
+    .header {
+        height: 79px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 3;
+    }
+
+    .header-container {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+
+    .header-navigation {
+        display: none;
+    }
+
+    .burger-btn {
+        display: flex;
+    }
+
+    .hero-container {
+        padding: 163px 27px 27px;
+    }
+
+    .hero-title {
+        font-size: 30px;
+        line-height: 33px;
+        margin-bottom: 33px;
+    }
+
+    .hero-info {
+        padding: 40px 21px;
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .shape-circumference {
+        width: 40px;
+        height: 40px;
+        top: 48px;
+        right: 0;
+        bottom: unset;
+    }
+
+    .shape-polygon-bottom {
+        width: 39px;
+        height: 39px;
+        bottom: 39px;
+        right: 161px;
+    }
+
+    .shape-polygon-top {
+        display: none;
+    }
+
+    .shape-polygon-middle {
+        width: 30px;
+        height: 29px;
+        left: 3px;
+        top: 92px;
+    }
+
+    .shape-square {
+        width: 25px;
+        height: 25px;
+        bottom: 83px;
+        left: 20px;
+    }
+
+    .shape-circle-two {
+        right: 48px;
+        bottom: 96px;
+    }
+
+    .shape-circle-three {
+        top: 78px;
+        left: 172px;
+    }
+
+    .shape-circle-one {
+        display: none;
+    }
+
+    .shape-circle-four {
+        display: none;
+    }
+
+    .welcome-to-fitpulse-container {
+        padding: 80px 20px 20px;
+    }
+
+    .welcome-to-fitpulse-content {
+        font-size: 18px;
+        line-height: 20px;
+        padding-bottom: 0;
+    }
+
+    .welcome-section-yellow-triangle,
+    .welcome-section-red-triangle,
+    .welcome-shape-circle-one,
+    .welcome-shape-circle-two {
+        display: none;
+    }
+
+    .fitpulse-section-title {
+        height: 51px;
+        font-size: 20px;
+        line-height: 22px;
+    }
+
+    .welcome-to-fitpulse-title {
+        margin-bottom: 20px;
+    }
+
+    .welcome-to-fitpulse-info {
+        flex-direction: column-reverse;
+        align-items: center;
+        row-gap: 20px;
+    }
+
+    .welcome-to-fitpulse-images {
+        width: 100%;
+    }
+
+    .pushing-girl-picture,
+    .fit-girl-picture {
+        width: 100%;
+    }
+
+    .pushing-girl-img,
+    .fit-girl-img {
+        // width: 100%;
+
+    }
+
+    .our-programs-container {
+        padding: 80px 20px 20px;
+    }
+
+    .our-programs-list {
+        gap: 40px 20px;
+    }
+
+    .our-programs-item-img {
+        height: 84px;
+        margin-bottom: 20px;
+    }
+
+    .our-programs-item-title {
+        font-size: 20px;
+        line-height: 22px;
+        margin-bottom: 30px;
+    }
+
+    .our-programs-item-text {
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    .our-programs-red-triangle,
+    .our-programs-yellow-square,
+    .our-programs-circle-one {
+        display: none;
+    }
+
+
+    .our-trainers-container {
+        padding: 80px 20px 20px;
+    }
+
+    .our-trainers-item {
+        border-radius: 6px;
+        min-width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 11fr auto;
+        min-height: 425px;
+    }
+
+    .our-trainers-item-content {
+        padding: 20px;
+    }
+
+    .our-trainer-name {
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    .trainer-photo {
+        width: 100%;
+    }
+
+    .our-trainers-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 40px;
+    }
+
+    .specialization {
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    .our-trainers-red-triangle,
+    .our-trainers-circumference,
+    .our-trainers-circle-one {
+        display: none;
+    }
+
+    .contact-us-container {
+        padding: 80px 20px 20px;
+    }
+
+    .contact-us-title {
+        margin-bottom: 40px;
+    }
+
+    .contact-us-content {
+        flex-direction: column;
+    }
+
+    .contact-list-item {
+        min-height: 200px;
+    }
+
+    .contact-us-red-triangle,
+    .contact-us-square,
+    .contact-us-circle-one {
+        display: none;
+    }
+
+    .purpose-img {
+        width: auto;
+        height: 35px;
+    }
+
+    .purpose {
+        font-size: 16px;
+        line-height: 18px;
+        word-break: break-word;
+    }
+
+    .contact-info-group {
+        display: inline-flex;
+    }
+
+    .contact-list-item {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
+        padding: 14px 20px;
+    }
+
+    .contact-list-item-purpose {
+        width: auto;
+        padding-inline: 0;
+        display: inline-flex;
+        box-shadow: 0 2px 0 0 #FF1A49;
+        padding-bottom: 14px;
+        align-items: center;
+    }
+
+    .contact-info-group {
+        row-gap: 10px;
+    }
+
+    .contact-info {
+        font-size: 20px;
+        line-height: 22px;
+        text-align: center
+    }
+
+    .contact-info-group {
+        @include place-center;
+        padding-inline-start: 0;
+    }
+
+    .contact-form {
+        padding-top: 0;
+    }
+
+    .contact-form-input,
+    .contact-form-textarea {
+        font-size: 16px;
+        line-height: 18px;
+    }
+
+    .form-label {
+        margin-bottom: 20px;
+    }
+
+    .form-label-txt {
+        margin-bottom: 30px;
+    }
+
+    .submit-btn {
+        height: 60px;
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    .contact-list {
+        min-width: 100%;
+    }
+
+    .footer-top {
+        justify-content: center;
+        padding: 30px 20px;
+        flex-wrap: wrap;
+        row-gap: 40px;
+    }
+
+    .footer-information {
+        padding-top: 0;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 30px;
+    }
+
+    .footer-general-info {
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+    }
+
+    .footer-top-content{
+        flex-direction: column;
+        row-gap: 40px;
+    }
+    .footer-information-cell-title {
+        text-align: center;
+    }
+
+    .footer-nav-item {
+        text-align: center;
+    }
+
+    .footer-contact-item {
+        text-align: center;
+    }
+
+    .copyrights {
+        font-size: 16px;
+        line-height: 18px;
+        font-weight: 403;
+        color: #ffffff;
+    }
+
+    .footer-description {
+        margin-bottom: 20px;
+        max-width: 100%;
+    }
+
+    .footer-information-cell-title {
+        margin-bottom: 10px;
+    }
+
+    .about-trainer {
+        -webkit-line-clamp: 3;
+    }
+}
+
+
+@media screen and (max-width:960px) {
+    .our-trainers-item {
+        flex-direction: column;
+    }
+
+
+}
+
+@media screen and (max-width:480px) {
+    .hero-container {
+        background-image: url("./assets/images/hero-img-mobile.jpg");
+    }
+
+    .our-programs-item {
+        min-width: 100%;
+    }
+
+    .our-trainers-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 40px;
+    }
+}
