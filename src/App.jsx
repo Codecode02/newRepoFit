@@ -58,7 +58,7 @@ function App() {
               </ul>
             </nav>
             <button type='button' className='burger-btn' onClick={() => setMenuOpen(true)}>
-              <i class="icon-Burger_Button burger-icon"></i>
+              <i className="icon-Burger_Button burger-icon"></i>
             </button>
           </div>
         </header>
@@ -136,7 +136,7 @@ function App() {
               <ul className='our-trainers-list'>
                 <li className="our-trainers-item">
                   <picture className='trainer-picture'>
-                    <source media="(max-width:1024px)" srcset={relaxingBoy} type='image/jpeg' />
+                    <source media="(max-width:1024px)" srcSet={relaxingBoy} type='image/jpeg' />
                     <img src={relaxingBoyMobile} alt="trainer photo" className='trainer-photo' />
                   </picture>
                   <div className='our-trainers-item-content'>
@@ -145,23 +145,23 @@ function App() {
                     <p className='about-trainer'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
                     <div className='social-link-group'>
                       <a href="#" className="social-link">
-                        <i class="icon-Component-53 social-link-icon"></i>
+                        <i className="icon-Component-53 social-link-icon"></i>
                       </a>
                       <a href="#" className="social-link">
-                        <i class="icon-x social-link-icon"></i>
+                        <i className="icon-x social-link-icon"></i>
                       </a>
                       <a href="#" className="social-link">
-                        <i class="icon-Component-55 social-link-icon"></i>
+                        <i className="icon-Component-55 social-link-icon"></i>
                       </a>
                       <a href="#" className="social-link">
-                        <i class="icon-linkedin social-link-icon"></i>
+                        <i className="icon-linkedin social-link-icon"></i>
                       </a>
                     </div>
                   </div>
                 </li>
                 <li className="our-trainers-item">
                   <picture className='trainer-picture'>
-                    <source media="(max-width:1024px)" srcset={standingGirl} type='image/jpeg' />
+                    <source media="(max-width:1024px)" srcSet={standingGirl} type='image/jpeg' />
                     <img src={standingGirlMobile} alt="trainer photo" className='trainer-photo' />
                   </picture>
                   <div className='our-trainers-item-content'>
@@ -170,23 +170,23 @@ function App() {
                     <p className='about-trainer'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
                     <div className='social-link-group'>
                       <a href="#" className="social-link">
-                        <i class="icon-Component-53 social-link-icon"></i>
+                        <i className="icon-Component-53 social-link-icon"></i>
                       </a>
                       <a href="#" className="social-link">
-                        <i class="icon-x social-link-icon"></i>
+                        <i className="icon-x social-link-icon"></i>
                       </a>
                       <a href="#" className="social-link">
-                        <i class="icon-Component-55 social-link-icon"></i>
+                        <i className="icon-Component-55 social-link-icon"></i>
                       </a>
                       <a href="#" className="social-link">
-                        <i class="icon-linkedin social-link-icon"></i>
+                        <i className="icon-linkedin social-link-icon"></i>
                       </a>
                     </div>
                   </div>
                 </li>
                 <li className="our-trainers-item">
                   <picture className='trainer-picture'>
-                    <source media="(max-width:1024px)" srcset={gymGirl} type='image/jpeg' />
+                    <source media="(max-width:1024px)" srcSet={gymGirl} type='image/jpeg' />
                     <img src={gymGirlMobile} alt="trainer photo" className='trainer-photo' />
                   </picture>
                   <div className='our-trainers-item-content'>
@@ -195,23 +195,23 @@ function App() {
                     <p className='about-trainer'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
                     <div className='social-link-group'>
                       <a href="#" className="social-link">
-                        <i class="icon-Component-53 social-link-icon"></i>
+                        <i className="icon-Component-53 social-link-icon"></i>
                       </a>
                       <a href="#" className="social-link">
-                        <i class="icon-x social-link-icon"></i>
+                        <i className="icon-x social-link-icon"></i>
                       </a>
                       <a href="#" className="social-link">
-                        <i class="icon-Component-55 social-link-icon"></i>
+                        <i className="icon-Component-55 social-link-icon"></i>
                       </a>
                       <a href="#" className="social-link">
-                        <i class="icon-linkedin social-link-icon"></i>
+                        <i className="icon-linkedin social-link-icon"></i>
                       </a>
                     </div>
                   </div>
                 </li>
                 <li className="our-trainers-item">
                   <picture className='trainer-picture'>
-                    <source media="(max-width:1024px)" srcset={gymBoy} type='image/jpeg' />
+                    <source media="(max-width:1024px)" srcSet={gymBoy} type='image/jpeg' />
                     <img src={gymBoyMobile} alt="trainer photo" className='trainer-photo' />
                   </picture>
                   <div className='our-trainers-item-content'>
@@ -220,16 +220,16 @@ function App() {
                     <p className='about-trainer'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
                     <div className='social-link-group'>
                       <a href="#" className="social-link">
-                        <i class="icon-Component-53 social-link-icon"></i>
+                        <i className="icon-Component-53 social-link-icon"></i>
                       </a>
                       <a href="#" className="social-link">
-                        <i class="icon-x social-link-icon"></i>
+                        <i className="icon-x social-link-icon"></i>
                       </a>
                       <a href="#" className="social-link">
-                        <i class="icon-Component-55 social-link-icon"></i>
+                        <i className="icon-Component-55 social-link-icon"></i>
                       </a>
                       <a href="#" className="social-link">
-                        <i class="icon-linkedin social-link-icon"></i>
+                        <i className="icon-linkedin social-link-icon"></i>
                       </a>
                     </div>
                   </div>
@@ -277,31 +277,31 @@ function App() {
                   </li>
                 </ul>
                 <form className='contact-form' action="#" method='post'>
-                  <label for="firstName" class="form-label">
+                  <label htmlFor="firstName" className="form-label">
                     <input type='text' id="firstName" className="contact-form-input" name="firstName" required />
-                    <div class="placeholder-imitation">First name<span>*</span></div>
-                    <span id="requiredMessage" class="error-message">
+                    <div className="placeholder-imitation">First name<span>*</span></div>
+                    <span id="requiredMessage" className="error-message">
                       Required Field
                     </span>
                   </label>
-                  <label for="lastName" class="form-label">
+                  <label htmlFor="lastName" className="form-label">
                     <input type='text' id="lastName" className="contact-form-input" name="lastName"  required />
-                    <div class="placeholder-imitation">Last name<span>*</span></div>
-                    <span id="requiredMessage" class="error-message">
+                    <div className="placeholder-imitation">Last name<span>*</span></div>
+                    <span id="requiredMessage" className="error-message">
                       Required Field
                     </span>
                   </label>
-                  <label for="email" class="form-label">
+                  <label htmlFor="email" className="form-label">
                     <input type='text' id="email" className="contact-form-input" name="email" required />
-                    <div class="placeholder-imitation">Email<span>*</span></div>
-                    <span id="requiredMessage" class="error-message">
+                    <div className="placeholder-imitation">Email<span>*</span></div>
+                    <span id="requiredMessage" className="error-message">
                       Required Field
                     </span>
                   </label>
-                  <label for="message" class="form-label-txt">
+                  <label htmlFor="message" className="form-label-txt">
                     <textarea name="message" id="message" className="contact-form-textarea" required></textarea>
-                    <div class="placeholder-imitation">Message<span>*</span></div>
-                    <span id="requiredMessage" class="error-message">
+                    <div className="placeholder-imitation">Message<span>*</span></div>
+                    <span id="requiredMessage" className="error-message">
                       Required Field
                     </span>
                   </label>
@@ -323,16 +323,16 @@ function App() {
                   <p className='footer-description'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                   <div className='social-link-group'>
                     <a href="#" className="social-link">
-                      <i class="icon-Component-53 social-link-icon"></i>
+                      <i className="icon-Component-53 social-link-icon"></i>
                     </a>
                     <a href="#" className="social-link">
-                      <i class="icon-x social-link-icon"></i>
+                      <i className="icon-x social-link-icon"></i>
                     </a>
                     <a href="#" className="social-link">
-                      <i class="icon-Component-55 social-link-icon"></i>
+                      <i className="icon-Component-55 social-link-icon"></i>
                     </a>
                     <a href="#" className="social-link">
-                      <i class="icon-linkedin social-link-icon"></i>
+                      <i className="icon-linkedin social-link-icon"></i>
                     </a>
                   </div>
                 </div>
@@ -383,7 +383,7 @@ function App() {
         <div className={`mobile-header-navigation ${menuOpen ? "open" : ""}`}>
           <div className='mobile-header-top'>
             <a href="#" className='header-logo-link'><img src={logo} alt="logo" className='logo' /></a>
-            <button type='button' className='nav-close-btn' onClick={() => setMenuOpen(false)}><i class="icon-Vector nav-close-icon"></i></button>
+            <button type='button' className='nav-close-btn' onClick={() => setMenuOpen(false)}><i className="icon-Vector nav-close-icon"></i></button>
           </div>
           <nav className='mobile-navigation'>
             <ul className='mobile-nav-list'>
