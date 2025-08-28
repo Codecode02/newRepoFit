@@ -404,7 +404,7 @@ body {
     height: auto;
 }
 
-.fit-girl-img{
+.fit-girl-img {
     width: 56.08%;
     top: 19.4%;
     left: 43.91%;
@@ -758,6 +758,7 @@ body {
     font-size: 0;
     text-align: left;
     margin-bottom: 30px;
+    position: relative;
 
     &.msg {
         .contact-form-input {
@@ -767,6 +768,41 @@ body {
         .error-message {
             display: block;
         }
+    }
+}
+
+.placeholder-imitation {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    font-size: 20px;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    padding-inline: 20px;
+    font-weight: 403;
+    text-transform: capitalize;
+    color: #D3D3D3;
+    transition: color 240ms;
+
+    >span {
+        padding-inline-start: 3px;
+        color: #FF0035;
+        transition: color 240ms;
+    }
+}
+
+.contact-form-input:valid~.placeholder-imitation {
+    display: none;
+}
+
+.contact-form-input:focus~.placeholder-imitation {
+    color: rgba(#D3D3D3, 0.8);
+
+    span {
+        color: rgba(#FF0035, 0.8);
     }
 }
 
@@ -774,6 +810,12 @@ body {
     font-size: 0;
     text-align: left;
     margin-bottom: 73px;
+    position: relative;
+
+    .placeholder-imitation{
+        align-items: flex-start;
+        padding: 20px;
+    }
 
     &.msg {
         .contact-form-input {
@@ -785,6 +827,34 @@ body {
         }
     }
 }
+
+
+.contact-form-input:valid~.placeholder-imitation {
+    display: none;
+}
+
+.contact-form-textarea:valid~.placeholder-imitation{
+    display: none;
+}
+
+.contact-form-textarea:focus~.placeholder-imitation {
+    color: rgba(#D3D3D3, 0.8);
+
+    span {
+        color: rgba(#FF0035, 0.8);
+    }
+}
+
+
+.contact-form-input:focus~.placeholder-imitation {
+    color: rgba(#D3D3D3, 0.8);
+
+    span {
+        color: rgba(#FF0035, 0.8);
+    }
+}
+
+
 
 .contact-form-input {
     width: 100%;
@@ -934,7 +1004,7 @@ body {
     max-width: 350px;
 }
 
-.footer-top-content{
+.footer-top-content {
     display: flex;
     column-gap: 12%;
 }
@@ -1353,10 +1423,11 @@ body {
         display: flex;
     }
 
-    .footer-top-content{
+    .footer-top-content {
         flex-direction: column;
         row-gap: 40px;
     }
+
     .footer-information-cell-title {
         text-align: center;
     }

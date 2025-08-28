@@ -278,25 +278,29 @@ function App() {
                 </ul>
                 <form className='contact-form' action="#" method='post'>
                   <label for="firstName" class="form-label">
-                    <input type='text' id="firstName" className="contact-form-input" name="firstName" placeholder='First Name *' required />
+                    <input type='text' id="firstName" className="contact-form-input" name="firstName" required />
+                    <div class="placeholder-imitation">First name<span>*</span></div>
                     <span id="requiredMessage" class="error-message">
                       Required Field
                     </span>
                   </label>
                   <label for="lastName" class="form-label">
-                    <input type='text' id="lastName" className="contact-form-input" name="lastName" placeholder='Last Name *' required />
+                    <input type='text' id="lastName" className="contact-form-input" name="lastName"  required />
+                    <div class="placeholder-imitation">Last name<span>*</span></div>
                     <span id="requiredMessage" class="error-message">
                       Required Field
                     </span>
                   </label>
                   <label for="email" class="form-label">
-                    <input type='text' id="email" className="contact-form-input" name="email" placeholder='Email *' required />
+                    <input type='text' id="email" className="contact-form-input" name="email" required />
+                    <div class="placeholder-imitation">Email<span>*</span></div>
                     <span id="requiredMessage" class="error-message">
                       Required Field
                     </span>
                   </label>
                   <label for="message" class="form-label-txt">
-                    <textarea name="message" id="message" className="contact-form-textarea" placeholder='Message *' required></textarea>
+                    <textarea name="message" id="message" className="contact-form-textarea" required></textarea>
+                    <div class="placeholder-imitation">Message<span>*</span></div>
                     <span id="requiredMessage" class="error-message">
                       Required Field
                     </span>
